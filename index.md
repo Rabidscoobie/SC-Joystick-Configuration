@@ -201,6 +201,10 @@ The end result is that I can now utilise all of the functions that the ships pro
 I am reworking the spreadsheet I used to keep track of the various functions whilst I was developing this project. Once ready, it will trace each button through it's various representations from physical button all the way to the key binding it controls in SC. I will also include the type of mapping I've used for each within Joystick Gremlin. 
 It (will be) available [here](#) soon-ish.
 
+Lastly, in case you are wondering, my in game moniker is [danricho][LINK-EXT-10]. 
+
+**See you 'round the 'verse!**
+
 # Reference List
 
 [1]  [Star Citizen][LINK-EXT-1] by *Cloud Imperium Games*  
@@ -242,3 +246,4 @@ It (will be) available [here](#) soon-ish.
 [LINK-EXT-7]: http://whitemagic.github.io/JoystickGremlin/
 [LINK-EXT-8]: http://vjoystick.sourceforge.net/
 [LINK-EXT-9]: https://github.com/SCToolsfactory/SCJMapper-V2
+[LINK-EXT-10]: https://robertsspaceindustries.com/citizens/danricho
