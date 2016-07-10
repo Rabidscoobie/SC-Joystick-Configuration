@@ -171,8 +171,8 @@ Joystick Gremlin allows mapping of joystick controls to the virtual joysticks' c
 
   1. Install **Joystick Gremlin [\[7\]](#reference-list)**.
   2. Assign the buttons/axes/sliders/hats of each physical controller (accessible by tabs) to vJoy or keyboard actions. This can be done in various ways:  
-    - Remap: physical action (eg: button press) is cloned to the virtual action.
-    - Macro: physical action triggers a pre-programmed sequence of virtual actions.
+    - Remap: physical action (eg: button press) is cloned to the virtual action.  
+    - Macro: physical action triggers a pre-programmed sequence of virtual actions.  
     - Custom Modules: allow a vast array of options by writing code which performs actions using various triggers including physical actions and time cycles. These modules are limited only by your familiarity with python code (see m modules for examples).  
   3. Activate Joystick Gremlin (or trigger activation by focus on Star Citizen.
   
