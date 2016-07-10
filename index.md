@@ -153,7 +153,7 @@ Once configured, vJoy is a set and forget tool. It creates the virtual joysticks
 
   1. Install **vJoy [\[8\]](#reference-list)**.
   2. Launch to configuration interface and create 2 virtual joysticks (1 tab each).
-  3. For each joystick, allocate:
+  3. For each joystick, allocate:  
      - 3 axis (X, Y, Z)
      - 3 rotations (Rx, Ry, Rz)
      - Slider
@@ -170,10 +170,10 @@ The virtual joysticks are now be shown in the list of USB game controllers.
 Joystick Gremlin allows mapping of joystick controls to the virtual joysticks' controls. This mapping can take many forms. Step 2 below describes the types of mapping possible with this tool.
 
   1. Install **Joystick Gremlin [\[7\]](#reference-list)**.
-  2. Assign the buttons/axes/sliders/hats of each physical controller (accessible by tabs) to vJoy or keyboard actions. This can be done in various ways:
+  2. Assign the buttons/axes/sliders/hats of each physical controller (accessible by tabs) to vJoy or keyboard actions. This can be done in various ways:  
     - Remap: physical action (eg: button press) is cloned to the virtual action.
     - Macro: physical action triggers a pre-programmed sequence of virtual actions.
-    - Custom Modules: allow a vast array of options by writing code which performs actions using various triggers including physical actions and time cycles. These modules are limited only by your familiarity with python code (see m modules for examples).
+    - Custom Modules: allow a vast array of options by writing code which performs actions using various triggers including physical actions and time cycles. These modules are limited only by your familiarity with python code (see m modules for examples).  
   3. Activate Joystick Gremlin (or trigger activation by focus on Star Citizen.
   
 Extensive documentation on the use of Joystick Gremlin is available on WhiteMagic's (project page)[LINK-EXT-7].
