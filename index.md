@@ -190,15 +190,16 @@ My SC keybinding (.xml) is available [here][LINK-REPO-SCXML], and needs to be pl
 The keymapping is loaded by navigating in the menu to: Options, Keybinding, Advanced Controls Customization.
 Under Control Profiles, select the keymapping and chose the controllers to load.
 
-### Mapping Matrix
+# Result (TBC)
 
-I am developing a spreadsheet which will trace each button through it's representations from physical button all the way to the key binding it triggers in SC. I will include the type of mapping I've used within Joystick Gremlin. It (will be) available [here](#).
+The end result is that I can now utilise all of the functions that the ships provide in Star Citizen with the added bonus of some specialised custom functions.
 
-# Result
+![Finished Panel & Joysticks][IMG-PLACEHOLDER]
 
-The end result is that I can now utilise all of the functions that the ships provide in Star Citizen with the added bonus of some specialised custom functions. I am planning to create a vide of it in use and I'll add it here.
+## Mapping Matrix
 
-![SC Controls Video \[Placeholder\]][IMG-PLACEHOLDER]
+I am reworking the spreadsheet I used to keep track of the various functions whilst I was developing this project. Once ready, it will trace each button through it's various representations from physical button all the way to the key binding it controls in SC. I will also include the type of mapping I've used for each within Joystick Gremlin. 
+It (will be) available [here](#) soon-ish.
 
 # Reference List
 
