@@ -192,6 +192,12 @@ My SC keybinding (.xml) is available [here][LINK-REPO-SCXML], and needs to be pl
 The keymapping is loaded by navigating in the menu to: Options, Keybinding, Advanced Controls Customization.
 Under Control Profiles, select the keymapping and chose the controllers to load.
 
+# Result
+
+The end result is that I can now utilise all of the functions that the ships provide in Star Citizen with the added bonus of some specialised custom functions. I am planning to create a vide of it in use and I'll add it here.
+
+![SC Controls Video \[Placeholder\]][IMG-PLACEHOLDER]
+
 # Reference List
 
 [1]  [Star Citizen][LINK-EXT-1] by *Cloud Imperium Games*  
@@ -216,6 +222,7 @@ Under Control Profiles, select the keymapping and chose the controllers to load.
 [IMG-PANEL_LAYOUT]: images/panel_layout.jpg
 [IMG-PANEL_DRV_BOARD]: images/panel_driver_board.jpg
 [IMG-PANEL_WIRING]: images/panel_wiring.jpg
+[IMG-PLACEHOLDER]: images/placeholder.jpg
 
 
 [LINK-REPO-ARDFW]: https://github.com/danricho/SC-Joystick-Configuration/tree/master/ArduinoFirmware
