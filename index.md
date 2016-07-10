@@ -176,7 +176,7 @@ Joystick Gremlin allows mapping of joystick controls to the virtual joysticks' c
     - Custom Modules: allow a vast array of options by writing code which performs actions using various triggers including physical actions and time cycles. These modules are limited only by your familiarity with python code (see m modules for examples).  
   3. Activate Joystick Gremlin (or trigger activation by focus on Star Citizen.
   
-Extensive documentation on the use of Joystick Gremlin is available on WhiteMagic's (project page)[LINK-EXT-7].
+Extensive documentation on the use of Joystick Gremlin is available on WhiteMagic's [project page][LINK-EXT-7].
 
 My Joystick Gremlin configuration (.xml) and and custom modules (.py) are available [here][LINK-REPO-JGCONF] and need to be placed in the directory:  
 `%userprofile%\Joystick Gremlin\`  
