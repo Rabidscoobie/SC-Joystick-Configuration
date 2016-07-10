@@ -121,8 +121,6 @@ My Arduino firmware is available [here][LINK-REPO-ARDFW]. When loaded, the Ardui
 
 ## Controller Fusion
 
-**This section is not complete.**
-
 At this point three controllers were visible to the computer; two T.16000m joysticks and the control panel. The total number of inputs are as follows:
 
 | CONTROLLER | INPUTS |
@@ -191,6 +189,10 @@ My SC keybinding (.xml) is available [here][LINK-REPO-SCXML], and needs to be pl
 
 The keymapping is loaded by navigating in the menu to: Options, Keybinding, Advanced Controls Customization.
 Under Control Profiles, select the keymapping and chose the controllers to load.
+
+### Mapping Matrix
+
+I am developing a spreadsheet which will trace each button through it's representations from physical button all the way to the key binding it triggers in SC. I will include the type of mapping I've used within Joystick Gremlin. It (will be) available [here](#).
 
 # Result
 
