@@ -145,7 +145,7 @@ There were multiple limitations to simply mapping these three controllers direct
   2. Only one button can be mapped to each function.
   3. Any custom button functions must be implemented on the Arduino, requiring all actions be mapped to an Arduino "joystick button".
 
-To remove these limitations, multiple options exist. The solution I chose is one I discovered on the SC forums. WhiteMagic's **Joystick Gremlin [\[7\]](#reference-list)** was developed to utilize "virtual joysticks" which can be linked to the physical joysticks in many ways.
+To remove these limitations, multiple options exist. The solution I chose is one I discovered on the SC forums. WhiteMagic's Joystick Gremlin was developed to utilize "virtual joysticks" which can be linked to the physical joysticks in many ways.
 
 ### vJoy
 
@@ -161,33 +161,34 @@ Once configured, vJoy is a set and forget tool. It creates the virtual joysticks
      - 50 buttons (maximum allowed in SC)  
   4. Activate vJoy.
   
+vJoy also include a utility to monitor the states of the vJoy joysticks. This is found in the start menu as `Monitor vJoy`.
+
 The virtual joysticks are now be shown in the list of USB game controllers.
 
 ### Joystick Gremlin
 
-*Note: The configurations and macro files in the repo are created for Joystick Gremlin v5 which is pre-release at the time of writing. Thanks for all your help WM!*
+Joystick Gremlin allows mapping of joystick controls to the virtual joysticks' controls. This mapping can take many forms. Step 2 below describes the types of mapping possible with this tool.
 
-**TO BE WRITTEN - mention the direct remaps, response curve, cutom modules, etc.**
+  1. Install **Joystick Gremlin [\[7\]](#reference-list)**.
+  2. Assign the buttons/axes/sliders/hats of each physical controller (accessible by tabs) to vJoy or keyboard actions. This can be done in various ways:
+    - Remap: physical action (eg: button press) is cloned to the virtual action.
+    - Macro: physical action triggers a pre-programmed sequence of virtual actions.
+    - Custom Modules: allow a vast array of options by writing code which performs actions using various triggers including physical actions and time cycles. These modules are limited only by your familiarity with python code (see m modules for examples).
+  3. Activate Joystick Gremlin (or trigger activation by focus on Star Citizen.
+  
+Extensive documentation on the use of Joystick Gremlin is available on WhiteMagic's (project page)[LINK-EXT-7].
 
-  1. Install **Joystick Gremlin**.
-  2. Assign the buttons of each physical controller (tabs) to virtual actions (vjoy buttons, macros, custom python modules).
-    - **examples etc will go here**
-  3. Activate Joystick Gremlin.
-
-*My Joystick Gremlin configuration (.xml) and and custom modules (.py) are available [here][LINK-REPO-JGCONF].*
-
-These files should be placed in the  
-`%userprofile%\Joystick Gremlin\` directory.  
-*Note: Custom modules (.py) should not be in a sub-directory.*
+My Joystick Gremlin configuration (.xml) and and custom modules (.py) are available [here][LINK-REPO-JGCONF] and need to be placed in the directory:  
+`%userprofile%\Joystick Gremlin\`  
+*Note: These files are created for Joystick Gremlin v5 which is pre-release at the time of writing. Thanks for all of your help WhiteMagic!*
 
 ### SC Joystick Mapper
 
 To map the virtual joysticks (vJoy 1 & 2) to SC keybindings, **SC Joystick Mapper [\[9\]](#reference-list)** can be helpful. It creates an XML file which can be imported into the game.
 
-*My SC keybinding (.xml) is available [here][LINK-REPO-SCXML].* 
+My SC keybinding (.xml) is available [here][LINK-REPO-SCXML], and needs to be placed in the directory:   
+`StarCitizen\CitizenClient\USER\Controls\Mappings\`
 
-This file should be placed in the 
-`StarCitizen\CitizenClient\USER\Controls\Mappings\` directory.  
 The keymapping is loaded by navigating in the menu to: Options, Keybinding, Advanced Controls Customization.
 Under Control Profiles, select the keymapping and chose the controllers to load.
 
@@ -231,5 +232,3 @@ Under Control Profiles, select the keymapping and chose the controllers to load.
 [LINK-EXT-7]: http://whitemagic.github.io/JoystickGremlin/
 [LINK-EXT-8]: http://vjoystick.sourceforge.net/
 [LINK-EXT-9]: https://github.com/SCToolsfactory/SCJMapper-V2
-
-
