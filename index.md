@@ -32,13 +32,13 @@ Having decided on the HOSAS setup, the next question was which joysticks I wante
   - they can be configured as left or right handed, and
   - they are very accurate.
   
-![My Dual T.16000m Layout](images/sticks_layout.jpg)
+![My Dual T.16000m Layout][IMG-STICK_LAYOUT]
 
 ## Control Panel
 
 The first step in designing the control panel was to determine how many buttons I would want to implement. I settled at around 60 after deciding which SC functions would be mapped to the panel itself, the buttons on the sticks, neither or both.
 
-![My Control Panel Layout](images/panel_layout.jpg)
+![My Control Panel Layout][IMG-PANEL_LAYOUT]
 
 With this decided, I was able to choose the type of buttons and the enclosure I wanted.
 
@@ -55,13 +55,13 @@ The Microchip **MCP23017 IC [\[2\]](#reference-list)** is a 16-bit I/O expander 
   - The 16 I/O pins include pull-up resistors meaning that this doesn't need to be implemented in hardware.
   - Adafruit's MCP23017 Library makes interfacing with these pins as easy as it is with the built-in Arduino pins.
 
-![Control Panel Driver Board](images/panel_driver_board.jpg)
+![Control Panel Driver Board][IMG-PANEL_DRV_BOARD]
 
 I have used four MCP23017 ICs giving me 64 additional I/O pins, sacrificing only 2 of the Arduino GPIO pins (I<sup>2</sup>C serial communication pins).
 
 With sufficient I/O pins available, I could assemble amd wire it all up.
 
-![Control Panel Wiring](images/panel_wiring.jpg)
+![Control Panel Wiring][IMG-PANEL_WIRING]
 
 ### Firmware
 
@@ -117,7 +117,7 @@ void loop() {
 }
 ~~~
 
-My Arduino firmware is available [here][REPO-LINK-ARDFW]. When loaded, the Arduino will be listed as a standard USB Game Controller in Windows (run command: `joy.cpl`). The standard utility will show only the first 32 buttons. To see more, I had success with **Pointy's Joystick Test [\[6\]](#reference-list)**. 
+My Arduino firmware is available [here][LINK-REPO-ARDFW]. When loaded, the Arduino will be listed as a standard USB Game Controller in Windows (run command: `joy.cpl`). The standard utility will show only the first 32 buttons. To see more, I had success with **Pointy's Joystick Test [\[6\]](#reference-list)**. 
 
 ## Controller Fusion
 
@@ -174,7 +174,7 @@ The virtual joysticks are now be shown in the list of USB game controllers.
     - **examples etc will go here**
   3. Activate Joystick Gremlin.
 
-*My Joystick Gremlin configuration (.xml) is available [here][REPO-LINK-JGXML] and custom modules (.py) are available [here][REPO-LINK-JGMOD].*
+*My Joystick Gremlin configuration (.xml) and and custom modules (.py) are available [here][LINK-REPO-JGCONF].*
 
 These files should be placed in the  
 `%userprofile%\Joystick Gremlin\` directory.  
@@ -184,7 +184,7 @@ These files should be placed in the
 
 To map the virtual joysticks (vJoy 1 & 2) to SC keybindings, **SC Joystick Mapper [\[9\]](#reference-list)** can be helpful. It creates an XML file which can be imported into the game.
 
-*My SC keybinding (.xml) is available [here][REPO-LINK-SCXML].* 
+*My SC keybinding (.xml) is available [here][LINK-REPO-SCXML].* 
 
 This file should be placed in the 
 `StarCitizen\CitizenClient\USER\Controls\Mappings\` directory.  
@@ -193,28 +193,43 @@ Under Control Profiles, select the keymapping and chose the controllers to load.
 
 # Reference List
 
-[1]  [Star Citizen][1] by *Cloud Imperium Games*  
-[2]  [MCP23017 datasheet][2] by *Microchip*  
-[3]  [MCP23017 Arduino Library][3] by *Adafruit*  
-[4]  [5V/16MHz Pro Micro product page][4] by *Sparkfun*  
-[5]  [HID Joystick Arduino Library][5] by *MHeironimus*  
-[6]  [Pointy's Joystick Test][6] by *Pointy*  
-[7]  [Joystick Gremlin][7] by *WhiteMagic*  
-[8]  [vJoy][8] by *Shaul Eizikovich*  
-[9]  [SC Joystick Mapper][9] by *SCToolsfactory*  
+[1]  [Star Citizen][LINK-EXT-1] by *Cloud Imperium Games*  
+[2]  [MCP23017 datasheet][LINK-EXT-2] by *Microchip*  
+[3]  [MCP23017 Arduino Library][LINK-EXT-3] by *Adafruit*  
+[4]  [5V/16MHz Pro Micro product page][LINK-EXT-4] by *Sparkfun*  
+[5]  [HID Joystick Arduino Library][LINK-EXT-5] by *MHeironimus*  
+[6]  [Pointy's Joystick Test][LINK-EXT-6] by *Pointy*  
+[7]  [Joystick Gremlin][LINK-EXT-7] by *WhiteMagic*  
+[8]  [vJoy][LINK-EXT-8] by *Shaul Eizikovich*  
+[9]  [SC Joystick Mapper][LINK-EXT-9] by *SCToolsfactory*  
 
 
-[1]: https://robertsspaceindustries.com/
-[2]: http://ww1.microchip.com/downloads/en/DeviceDoc/21952b.pdf
-[3]: https://github.com/adafruit/Adafruit-MCP23017-Arduino-Library
-[4]: https://www.sparkfun.com/products/12640
-[5]: https://github.com/MHeironimus/ArduinoJoystickLibrary
-[6]: http://www.planetpointy.co.uk/joystick-test-application/
-[7]: http://whitemagic.github.io/JoystickGremlin/
-[8]: http://vjoystick.sourceforge.net/
-[9]: https://github.com/SCToolsfactory/SCJMapper-V2
 
-[REPO-LINK-ARDFW]: https://github.com/danricho/StarCitizenConfigs/tree/master/ArduinoFirmware
-[REPO-LINK-JGXML]: https://github.com/danricho/StarCitizenConfigs/blob/master/dual_t16000m_leonardo_JoystickGremlin.xml
-[REPO-LINK-JGMOD]: https://github.com/danricho/StarCitizenConfigs/tree/master/customJGmodules
-[REPO-LINK-SCXML]: https://github.com/danricho/StarCitizenConfigs/blob/master/dual_t16000m_leonardo_SCmap.xml
+
+[comment]: # (==========================================================)
+[comment]: # (REFERENCED LINKS AND IMAGES)
+[comment]: # (==========================================================)
+
+
+[IMG-STICK_LAYOUT]: images/sticks_layout.jpg
+[IMG-PANEL_LAYOUT]: images/panel_layout.jpg
+[IMG-PANEL_DRV_BOARD]: images/panel_driver_board.jpg
+[IMG-PANEL_WIRING]: images/panel_wiring.jpg
+
+
+[LINK-REPO-ARDFW]: https://github.com/danricho/SC-Joystick-Configuration/tree/master/ArduinoFirmware
+[LINK-REPO-JGCONF]: https://github.com/danricho/SC-Joystick-Configuration/tree/master/Joystick%20Gremlin
+[LINK-REPO-SCXML]: https://github.com/danricho/SC-Joystick-Configuration/blob/master/dual_t16000m_leonardo_SCmap.xml
+
+
+[LINK-EXT-1]: https://robertsspaceindustries.com/
+[LINK-EXT-2]: http://ww1.microchip.com/downloads/en/DeviceDoc/21952b.pdf
+[LINK-EXT-3]: https://github.com/adafruit/Adafruit-MCP23017-Arduino-Library
+[LINK-EXT-4]: https://www.sparkfun.com/products/12640
+[LINK-EXT-5]: https://github.com/MHeironimus/ArduinoJoystickLibrary
+[LINK-EXT-6]: http://www.planetpointy.co.uk/joystick-test-application/
+[LINK-EXT-7]: http://whitemagic.github.io/JoystickGremlin/
+[LINK-EXT-8]: http://vjoystick.sourceforge.net/
+[LINK-EXT-9]: https://github.com/SCToolsfactory/SCJMapper-V2
+
+
