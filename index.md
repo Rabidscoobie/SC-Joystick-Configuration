@@ -14,7 +14,7 @@ published: true
 
 # Introduction 
 
-When I started playing **Star Citizen [\[1\]](#reference-list)** (SC) I found the key combinations required during "flight" overwhelming. I saw this problem as something that could be overcome by designing a physical "control panel" which would have the most important functions mapped to a dedicated button.
+When I started playing **Star Citizen [\[1\]](#reference-list "Reference List: [1]")** (SC) I found the key combinations required during "flight" overwhelming. I saw this problem as something that could be overcome by designing a physical "control panel" which would have the most important functions mapped to a dedicated button.
 
 *Note: I only outline setting up the SC "flight" functionality as I primarily use keyboard and mouse for other parts of the game such as First-Person Shooting (FPS).*
 
@@ -44,12 +44,12 @@ With this decided, I was able to choose the type of buttons and the enclosure I 
 
 I chose the Arduino as the micro-controller platform within the panel as I've used them previously, they are simple, and they work out of the box. 
 
-The specific Arduino I chose was an "eBay knockoff" of the **5V/16MHz Pro Micro [\[4\]](#reference-list)**. This is based on the **Leonardo** range of Arduinos which allow Human Interface Device (HID) emulation as the micro-controller itself (ATmega32u4) has built-in USB communication, eliminating the need for a secondary processor. 
+The specific Arduino I chose was an "eBay knockoff" of the **5V/16MHz Pro Micro [\[4\]](#reference-list "Reference List: [4]")**. This is based on the **Leonardo** range of Arduinos which allow Human Interface Device (HID) emulation as the micro-controller itself (ATmega32u4) has built-in USB communication, eliminating the need for a secondary processor. 
 
 The only limitation with Arduinos for a project like this is that they provide limited general purpose Input/Output (GPIO or I/O) pins.
 The workaround I chose for this was to use external devices to add more, as this reduced the complexity of the Arduino software and the hardware required to support the switches.
 
-The Microchip **MCP23017 IC [\[2\]](#reference-list)** is a 16-bit I/O expander with an I<sup>2</sup>C serial control interface. The reasons I chose these chips are as follows:
+The Microchip **MCP23017 IC [\[2\]](#reference-list "Reference List: [2]")** is a 16-bit I/O expander with an I<sup>2</sup>C serial control interface. The reasons I chose these chips are as follows:
 
   - Multiple chips can be used on the serial bus and each adds 16 additional I/O pins.
   - The 16 I/O pins include pull-up resistors meaning that this doesn't need to be implemented in hardware.
@@ -65,7 +65,7 @@ With sufficient I/O pins available, I could assemble amd wire it all up.
 
 ### Firmware
 
-Here is a bare-basic example of how to use the **MCP23017 Library [\[3\]](#reference-list)**:
+Here is a bare-basic example of how to use the **MCP23017 Library [\[3\]](#reference-list "Reference List: [3]")**:
 
 ~~~c++
 #include <Wire.h>
@@ -96,7 +96,7 @@ At the time I am writing this, the release version of the Joystick Library is v1
 
 *Note: Arduino IDE 1.6.6 (or above) is required for this library.*
 
-Here is a bare-basic example of how to use the **HID Joystick Library [\[5\]](#reference-list)**:
+Here is a bare-basic example of how to use the **HID Joystick Library [\[5\]](#reference-list "Reference List: [5]")**:
 
 ~~~c++
 #include <Joystick.h>
@@ -149,7 +149,7 @@ To remove these limitations, multiple options exist. The solution I chose is one
 
 Once configured, vJoy is a set and forget tool. It creates the virtual joysticks and unless troubleshooting or changing the vJoy parameters, there is little evidence that it is even installed. I set it up as follows:
 
-  1. Install **vJoy [\[8\]](#reference-list)**.
+  1. Install **vJoy [\[8\]](#reference-list "Reference List: [8]")**.
   2. Launch to configuration interface and create 2 virtual joysticks (1 tab each).
   3. For each joystick, allocate:  
      - 3 axis (X, Y, Z)
@@ -167,7 +167,7 @@ The virtual joysticks are now be shown in the list of USB game controllers.
 
 Joystick Gremlin allows mapping of joystick controls to the virtual joysticks' controls. This mapping can take many forms. Step 2 below describes the types of mapping possible with this tool.
 
-  1. Install **Joystick Gremlin [\[7\]](#reference-list)**.
+  1. Install **Joystick Gremlin [\[7\]](#reference-list "Reference List: [7]")**.
   2. Assign the buttons/axes/sliders/hats of each physical controller (accessible by tabs) to vJoy or keyboard actions. This can be done in various ways:  
      - **Remap**: physical action (eg: button press) is cloned to the virtual action (eg: vJoy button press, keyboard button press, etc.  
      - **Macro**: physical action triggers a pre-programmed sequence of virtual actions.  
@@ -182,7 +182,7 @@ My Joystick Gremlin configuration (.xml) and and custom modules (.py) are availa
 
 ### SC Joystick Mapper
 
-To map the virtual joysticks (vJoy 1 & 2) to SC keybindings, **SC Joystick Mapper [\[9\]](#reference-list)** can be helpful. It creates an XML file which can be imported into the game.
+To map the virtual joysticks (vJoy 1 & 2) to SC keybindings, **SC Joystick Mapper [\[9\]](#reference-list "Reference List: [9]")** can be helpful. It creates an XML file which can be imported into the game.
 
 My SC keybinding (.xml) is available [here][LINK-REPO-SCXML], and needs to be placed in the directory:   
 `StarCitizen\CitizenClient\USER\Controls\Mappings\`
