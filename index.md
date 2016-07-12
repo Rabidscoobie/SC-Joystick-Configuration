@@ -194,16 +194,16 @@ Under Control Profiles, select the keymapping and chose the controllers to load.
 
 The end result is that I can now utilise all of the functions that the ships provide in Star Citizen with the added bonus of some specialised custom functions.
 
-![Finished Panel & Joysticks][IMG-PLACEHOLDER]
+![Finished Panel][IMG-PANEL_FINISHED]
 
 ## Mapping Matrix
 
-I am reworking the spreadsheet I used to keep track of the various functions whilst I was developing this project. Once ready, it will trace each button through it's various representations from physical button all the way to the key binding it controls in SC. I will also include the type of mapping I've used for each within Joystick Gremlin. 
-It (will be) available [here](#) soon-ish.
+I have reworked the spreadsheet I used to keep track of the various functions whilst I was developing this project. It traces each button through it's various representations from physical button all the way to the key binding it controls in SC. I also includes the type of mapping I've used for each within Joystick Gremlin. 
+It is available [here][LINK-REPO-MAPPING].
 
-Lastly, in case you are wondering, my in game moniker is [danricho][LINK-EXT-10]. 
 
-**See you 'round the 'verse!**
+**Lastly, in case you are wondering, my in game moniker is [danricho][LINK-EXT-10].  
+See you 'round the 'verse!**
 
 # Reference List
 
@@ -229,12 +229,14 @@ Lastly, in case you are wondering, my in game moniker is [danricho][LINK-EXT-10]
 [IMG-PANEL_LAYOUT]: images/panel_layout.jpg
 [IMG-PANEL_DRV_BOARD]: images/panel_driver_board.jpg
 [IMG-PANEL_WIRING]: images/panel_wiring.jpg
+[IMG-PANEL_FINISHED]: images/panel_finished.jpg
 [IMG-PLACEHOLDER]: images/placeholder.jpg
 
 
 [LINK-REPO-ARDFW]: https://github.com/danricho/SC-Joystick-Configuration/tree/master/ArduinoFirmware
 [LINK-REPO-JGCONF]: https://github.com/danricho/SC-Joystick-Configuration/tree/master/Joystick%20Gremlin
 [LINK-REPO-SCXML]: https://github.com/danricho/SC-Joystick-Configuration/blob/master/dual_t16000m_leonardo_SCmap.xml
+[LINK-REPO-MAPPING]: https://github.com/danricho/SC-Joystick-Configuration/blob/master/Mapping%20Summary.xlsx
 
 
 [LINK-EXT-1]: https://robertsspaceindustries.com/
