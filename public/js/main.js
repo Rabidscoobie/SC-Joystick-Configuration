@@ -29,7 +29,7 @@ $( document ).ready(function() {
   // all external links in new window (except repo download links)
   $('a').each(function() {
     var a = new RegExp('/' + window.location.host + '/');
-    if ((!a.test(this.href)) && (!this.attr("title").includes("Download"))) {
+    if ((!a.test(this.href) && (!this.attr("title").includes("Download"))) {
       $(this).attr('target','_blank')
     }
   });
