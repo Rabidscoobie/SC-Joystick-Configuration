@@ -1,3 +1,9 @@
+// test if element has an attribute
+$.fn.hasAttr = function(name) {  
+   return this.attr(name) !== undefined;
+};
+
+
 // Google Analytics
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -26,28 +32,28 @@ $( document ).ready(function() {
     }, 500);
   });
   
-  // all external links in new window (except repo download links)
+  // all external links in new window (except repo download links) and tracking by Google Analytics
   $('a').each(function() {
     var a = new RegExp('/' + window.location.host + '/');
-    if ((!a.test(this.href)) && (!$(this).attr("title").includes("Download"))) {
-      $(this).attr('target','_blank')
-    }
-  });
-  
-  // external links tracked by Google Analytics
-  $('a').click(function () {
-    var a = new RegExp('/' + window.location.host + '/');
-    if (!a.test(this.href)) {
-      if (this.attr("title").includes("Download")){
-        ga('send', 'event', 'download', 'click', this.attr("title"));
-      } 
-      else {
-        ga('send', 'event', 'outbound', 'click', this.attr("title"));
+    if (!a.test(this.href)) { // if it is an external link
+      if ($(this).hasAttr("title")){ // if it has a 'title' attribute
+      	if (!$(this).attr("title").includes("Download")) { // if not a download link
+          $(this).attr('target','_blank')
+          ga('send', 'event', 'outbound', 'click', this.attr("title"));
+        } 
+        else { // it is a download link
+          $(this).click(function(){
+          	ga('send', 'event', 'download', 'click', this.attr("title"));
+          });
+        }
+      }
+      else { // if it doesn't have a 'title' attribute
+        $(this).attr('target','_blank')
+        ga('send', 'event', 'outbound', 'click', this.attr("href"));
       }
     }
   });
-  
-  
+
   // close sidebar on anchor selection
   $(".sidebar-nav a").click(function() {
     $(".sidebar-toggle").click();
