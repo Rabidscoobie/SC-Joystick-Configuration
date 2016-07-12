@@ -40,16 +40,19 @@ $( document ).ready(function() {
       	if (!$(this).attr("title").includes("Download")) { // if not a download link
           $(this).attr('target','_blank')
           ga('send', 'event', 'outbound', 'click', $(this).attr("title"));
+          console.log("Sending GA Event: " + {"type": "outbound", "trigger": "click", "description": $(this).attr("title")});
         } 
         else { // it is a download link
           $(this).click(function(){
           	ga('send', 'event', 'download', 'click', $(this).attr("title"));
+            console.log("Sending GA Event: " + {"type": "download", "trigger": "click", "description": $(this).attr("title")});
           });
         }
       }
       else { // if it doesn't have a 'title' attribute
         $(this).attr('target','_blank')
         ga('send', 'event', 'outbound', 'click', $(this).attr("href"));
+        console.log("Sending GA Event: " + {"type": "outbound", "trigger": "click", "description": $(this).attr("href")});
       }
     }
   });
