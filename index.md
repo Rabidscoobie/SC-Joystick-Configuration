@@ -190,7 +190,7 @@ My SC keybinding (.xml) is available [here][LINK-REPO-SCXML], and needs to be pl
 The keymapping is loaded by navigating in the menu to: Options, Keybinding, Advanced Controls Customization.
 Under Control Profiles, select the keymapping and chose the controllers to load.
 
-# Result (TBC)
+# Result
 
 The end result is that I can now utilise all of the functions that the ships provide in Star Citizen with the added bonus of some specialised custom functions.
 
