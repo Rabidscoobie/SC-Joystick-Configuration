@@ -1,3 +1,12 @@
+// Google Analytics
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-80632859-1', 'auto');
+ga('send', 'pageview');
+
+
 $( document ).ready(function() {
   
   // build the nav items
@@ -24,6 +33,20 @@ $( document ).ready(function() {
       $(this).attr('target','_blank')
     }
   });
+  
+  // external links tracked by Google Analytics
+  $('a').click(function () {
+    var a = new RegExp('/' + window.location.host + '/');
+    if (!a.test(this.href)) {
+      if (this.attr("title").includes("Download")){
+        ga('send', 'event', 'download', 'click', this.attr("title"));
+      } 
+      else {
+        ga('send', 'event', 'outbound', 'click', this.attr("title"));
+      }
+    }
+  });
+  
   
   // close sidebar on anchor selection
   $(".sidebar-nav a").click(function() {
