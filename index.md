@@ -236,7 +236,7 @@ See you 'round the 'verse!**
 [LINK-REPO-ARDFW]: https://github.com/danricho/SC-Joystick-Configuration/tree/master/ArduinoFirmware
 [LINK-REPO-JGCONF]: https://github.com/danricho/SC-Joystick-Configuration/tree/master/Joystick%20Gremlin
 [LINK-REPO-SCXML]: https://github.com/danricho/SC-Joystick-Configuration/blob/master/dual_t16000m_leonardo_SCmap.xml
-[LINK-REPO-MAPPING]: https://github.com/danricho/SC-Joystick-Configuration/blob/master/Mapping%20Summary.xlsx
+[LINK-REPO-MAPPING]: https://raw.githubusercontent.com/danricho/SC-Joystick-Configuration/master/Mapping%20Summary.xlsx
 
 
 [LINK-EXT-1]: https://robertsspaceindustries.com/
