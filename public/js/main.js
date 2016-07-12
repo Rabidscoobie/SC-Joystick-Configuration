@@ -41,13 +41,13 @@ $( document ).ready(function() {
           $(this).attr('target','_blank')
           $(this).click(function(){
             ga('send', 'event', 'outbound', 'click', $(this).attr("title"));
-            console.log("Sending GA Event: " + {"type": "outbound", "trigger": "click", "description": $(this).attr("title")});
+            console.log("Sending GA Event: ", {"type": "outbound", "trigger": "click", "description": $(this).attr("title")});
           });
         } 
         else { // it is a download link
           $(this).click(function(){
           	ga('send', 'event', 'download', 'click', $(this).attr("title"));
-            console.log("Sending GA Event: " + {"type": "download", "trigger": "click", "description": $(this).attr("title")});
+            console.log("Sending GA Event: ", {"type": "download", "trigger": "click", "description": $(this).attr("title")});
           });
         }
       }
@@ -55,7 +55,7 @@ $( document ).ready(function() {
         $(this).attr('target','_blank')
         $(this).click(function(){
           ga('send', 'event', 'outbound', 'click', $(this).attr("href"));
-          console.log("Sending GA Event: " + {"type": "outbound", "trigger": "click", "description": $(this).attr("href")});
+          console.log("Sending GA Event: ", {"type": "outbound", "trigger": "click", "description": $(this).attr("href")});
         });
       }
     }
