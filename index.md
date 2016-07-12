@@ -233,19 +233,19 @@ See you 'round the 'verse!**
 [IMG-PLACEHOLDER]: images/placeholder.jpg
 
 
-[LINK-REPO-ARDFW]: https://github.com/danricho/SC-Joystick-Configuration/tree/master/ArduinoFirmware
-[LINK-REPO-JGCONF]: https://github.com/danricho/SC-Joystick-Configuration/tree/master/Joystick%20Gremlin
-[LINK-REPO-SCXML]: https://github.com/danricho/SC-Joystick-Configuration/blob/master/dual_t16000m_leonardo_SCmap.xml
-[LINK-REPO-MAPPING]: https://raw.githubusercontent.com/danricho/SC-Joystick-Configuration/master/Mapping%20Summary.xlsx
+[LINK-REPO-ARDFW]: https://github.com/danricho/SC-Joystick-Configuration/tree/master/ArduinoFirmware "Repo Link: Arduino Firmware"
+[LINK-REPO-JGCONF]: https://github.com/danricho/SC-Joystick-Configuration/tree/master/Joystick%20Gremlin "Repo Link: Joystick Gremlin"
+[LINK-REPO-SCXML]: https://github.com/danricho/SC-Joystick-Configuration/blob/master/dual_t16000m_leonardo_SCmap.xml "Repo Link: SC XML Map"
+[LINK-REPO-MAPPING]: https://raw.githubusercontent.com/danricho/SC-Joystick-Configuration/master/Mapping%20Summary.xlsx "Repo Link: Mapping Spreadsheet"
 
 
-[LINK-EXT-1]: https://robertsspaceindustries.com/
-[LINK-EXT-2]: http://ww1.microchip.com/downloads/en/DeviceDoc/21952b.pdf
-[LINK-EXT-3]: https://github.com/adafruit/Adafruit-MCP23017-Arduino-Library
-[LINK-EXT-4]: https://www.sparkfun.com/products/12640
-[LINK-EXT-5]: https://github.com/MHeironimus/ArduinoJoystickLibrary
-[LINK-EXT-6]: http://www.planetpointy.co.uk/joystick-test-application/
-[LINK-EXT-7]: http://whitemagic.github.io/JoystickGremlin/
-[LINK-EXT-8]: http://vjoystick.sourceforge.net/
-[LINK-EXT-9]: https://github.com/SCToolsfactory/SCJMapper-V2
-[LINK-EXT-10]: https://robertsspaceindustries.com/citizens/danricho
+[LINK-EXT-1]: https://robertsspaceindustries.com/ "'Roberts Space Industries' website"
+[LINK-EXT-2]: http://ww1.microchip.com/downloads/en/DeviceDoc/21952b.pdf "'MCP23017' datasheet"
+[LINK-EXT-3]: https://github.com/adafruit/Adafruit-MCP23017-Arduino-Library "'MCP23017' Arduino Library repo"
+[LINK-EXT-4]: https://www.sparkfun.com/products/12640 "'Pro Micro' Sparkfun product page"
+[LINK-EXT-5]: https://github.com/MHeironimus/ArduinoJoystickLibrary "'HID Joystick' Arduino Library repo"
+[LINK-EXT-6]: http://www.planetpointy.co.uk/joystick-test-application/ "'Joystick Test' tool"
+[LINK-EXT-7]: http://whitemagic.github.io/JoystickGremlin/ "'Joystick Gremlin' project page"
+[LINK-EXT-8]: http://vjoystick.sourceforge.net/ "'vJoy' Sourceforge page"
+[LINK-EXT-9]: https://github.com/SCToolsfactory/SCJMapper-V2 "'SCJMapper' repo"
+[LINK-EXT-10]: https://robertsspaceindustries.com/citizens/danricho "My Star Citizen profile"
