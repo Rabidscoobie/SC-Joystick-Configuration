@@ -46,7 +46,7 @@ The specific Arduino I chose was an "eBay knockoff" of the **5V/16MHz Pro Micro 
 
 The only limitation with Arduinos for a project like this is that they provide limited general purpose Input/Output (GPIO or I/O) pins. There are many workarounds including wiring the buttons in a matrix to and cyclically read them by row. This would've added complexity so the workaround I chose for this was to use external devices to add more, as this reduced the complexity of the Arduino software and the hardware required to support the switches.
 
-The Microchip **MCP23017 IC [\[2\]](#reference-list "Reference List: [2]")** is a 16-bit I/O expander with an I<sup>2</sup>C serial control interface. It works in a similar manner to s standard parallel to serial shift register. The differences (and the reasons I chose these chips) are as follows:
+The Microchip **MCP23017 IC [\[2\]](#reference-list "Reference List: [2]")** is a 16-bit I/O expander with an I<sup>2</sup>C serial control interface. It works in a similar manner to a standard parallel to serial shift register. The differences (and the reasons I chose these chips) are as follows:
 
   - Multiple chips can be used on the serial bus and each adds 16 additional I/O pins;
   - The 16 I/O pins include pull-up resistors meaning that discrete resistors for each button weren't needed; and,
