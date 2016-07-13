@@ -244,7 +244,7 @@ See you 'round the 'verse!**
 [LINK-EXT-3]: https://github.com/adafruit/Adafruit-MCP23017-Arduino-Library "'MCP23017' Arduino Library repo"
 [LINK-EXT-4]: https://www.sparkfun.com/products/12640 "'Pro Micro' Sparkfun product page"
 [LINK-EXT-5]: https://github.com/MHeironimus/ArduinoJoystickLibrary "'HID Joystick' Arduino Library repo"
-[LINK-EXT-6]: http://www.planetpointy.co.uk/joystick-test-application/ "'Joystick Test' tool"
+[LINK-EXT-6]: http://www.planetpointy.co.uk/joystick-test-application/ "'Pointys Joystick Test' tool"
 [LINK-EXT-7]: http://whitemagic.github.io/JoystickGremlin/ "'Joystick Gremlin' project page"
 [LINK-EXT-8]: http://vjoystick.sourceforge.net/ "'vJoy' Sourceforge page"
 [LINK-EXT-9]: https://github.com/SCToolsfactory/SCJMapper-V2 "'SCJMapper' repo"
