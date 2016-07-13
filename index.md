@@ -23,7 +23,7 @@ When I started playing **Star Citizen [\[1\]](#reference-list "Reference List: [
 ## Joysticks
 
 The first thing I decided was that I wanted my flight control to be a **HOSAS** (Hands On Stick And Stick) rather than the perhaps more common HOTAS (Hand On Throttle And Stick) setup. 
-My rationale is that the game is primarily space based and the additional axes that the dual sticks afford, provide fine control of all three "strafing" dimensions as well as all three rotational "Pitch, Roll and Yaw" dimensions.
+My rationale is that the game is primarily space based and the additional axes that the dual sticks afford, provide fine control of all three "strafing" directions as well as all three rotational "Pitch, Roll and Yaw" rotations.
 
 Having decided on the HOSAS setup, the next question was which joysticks I wanted to use. I decided upon two **Thrustmaster T.16000m** joysticks. The factors that decided this choice were:
 
@@ -36,34 +36,33 @@ Having decided on the HOSAS setup, the next question was which joysticks I wante
 
 ## Control Panel
 
-The first step in designing the control panel was to determine how many buttons I would want to implement. I settled at around 60 after deciding which SC functions would be mapped to the panel itself, the buttons on the sticks, neither or both.
+The first step in designing the control panel was to determine how many buttons I wanted to implement. I settled at around 60 after deciding which SC functions would be mapped to the panel itself, the buttons on the sticks, neither or both.
 
 ![My Control Panel Layout][IMG-PANEL_LAYOUT]
 
-With this decided, I was able to choose the type of buttons and the enclosure I wanted.
+Next, I chose the type of buttons and the enclosure I wanted and ordered those. Whilst I was waiting I started thinking about how to drive it. For this, I chose the Arduino as the micro-controller platform as I've used them previously, they are simple, and they work straight out of the box. 
 
-I chose the Arduino as the micro-controller platform within the panel as I've used them previously, they are simple, and they work out of the box. 
+The specific Arduino I chose was an "eBay knockoff" of the **5V/16MHz Pro Micro [\[4\]](#reference-list "Reference List: [4]")**. This is based on the **Leonardo** range of Arduinos which allow Human Interface Device (HID) emulation as the micro-controller itself (ATmega32u4) has built-in USB communication, which eliminates the need for a secondary processor. 
 
-The specific Arduino I chose was an "eBay knockoff" of the **5V/16MHz Pro Micro [\[4\]](#reference-list "Reference List: [4]")**. This is based on the **Leonardo** range of Arduinos which allow Human Interface Device (HID) emulation as the micro-controller itself (ATmega32u4) has built-in USB communication, eliminating the need for a secondary processor. 
+The only limitation with Arduinos for a project like this is that they provide limited general purpose Input/Output (GPIO or I/O) pins. There are many workarounds including wiring the buttons in a matrix to and cyclically read them by row. This would've added complexity so the workaround I chose for this was to use external devices to add more, as this reduced the complexity of the Arduino software and the hardware required to support the switches.
 
-The only limitation with Arduinos for a project like this is that they provide limited general purpose Input/Output (GPIO or I/O) pins.
-The workaround I chose for this was to use external devices to add more, as this reduced the complexity of the Arduino software and the hardware required to support the switches.
+The Microchip **MCP23017 IC [\[2\]](#reference-list "Reference List: [2]")** is a 16-bit I/O expander with an I<sup>2</sup>C serial control interface. It works in a similar manner to s standard parallel to serial shift register. The differences (and the reasons I chose these chips) are as follows:
 
-The Microchip **MCP23017 IC [\[2\]](#reference-list "Reference List: [2]")** is a 16-bit I/O expander with an I<sup>2</sup>C serial control interface. The reasons I chose these chips are as follows:
-
-  - Multiple chips can be used on the serial bus and each adds 16 additional I/O pins.
-  - The 16 I/O pins include pull-up resistors meaning that this doesn't need to be implemented in hardware.
+  - Multiple chips can be used on the serial bus and each adds 16 additional I/O pins;
+  - The 16 I/O pins include pull-up resistors meaning that discrete resistors for each button weren't needed; and,
   - Adafruit's MCP23017 Library makes interfacing with these pins as easy as it is with the built-in Arduino pins.
 
 ![Control Panel Driver Board][IMG-PANEL_DRV_BOARD]
 
-I have used four MCP23017 ICs giving me 64 additional I/O pins, sacrificing only 2 of the Arduino GPIO pins (I<sup>2</sup>C serial communication pins).
+I have used four MCP23017 ICs giving me 64 additional I/O pins, sacrificing only 2 of the Arduino GPIO pins for I<sup>2</sup>C serial communication with the chips.
 
-With sufficient I/O pins available, I could assemble amd wire it all up.
+With sufficient I/O pins available (and my buttons and enclosure in-hand), I assembled amd wired it all up.
 
 ![Control Panel Wiring][IMG-PANEL_WIRING]
 
 ### Firmware
+
+I am providing basic examples of how to use the libraries in this section.
 
 Here is a bare-basic example of how to use the **MCP23017 Library [\[3\]](#reference-list "Reference List: [3]")**:
 
@@ -117,27 +116,11 @@ void loop() {
 }
 ~~~
 
-My Arduino firmware is available [here][LINK-REPO-ARDFW]. When loaded, the Arduino will be listed as a standard USB Game Controller in Windows (run command: `joy.cpl`). The standard utility will show only the first 32 buttons. To see more, I had success with **Pointy's Joystick Test [\[6\]](#reference-list)**. 
+My Arduino firmware is available [here][LINK-REPO-ARDFW]. When loaded, the Arduino is listed as a standard USB Game Controller in Windows (run command: `joy.cpl`). The standard utility shows only the first 32 buttons. To see more, I had success with **Pointy's Joystick Test [\[6\]](#reference-list)**. 
 
 ## Controller Fusion
 
-At this point three controllers were visible to the computer; two T.16000m joysticks and the control panel. The total number of inputs are as follows:
-
-| CONTROLLER | INPUTS |
-| :---: | :---: |
-|Left T.16000m|Axis 1-3|
-|Left T.16000m|Slider|
-|Left T.16000m|Hat|
-|Left T.16000m|Buttons 1-4 (on stick)|
-|Left T.16000m|Buttons 5-16 (on base)|
-|Right T.16000m|Axis 1-3|
-|Right T.16000m|Slider|
-|Right T.16000m|Hat|
-|Right T.16000m|Buttons 1-4 (on stick)|
-|Right T.16000m|Buttons 5-16 (on base)|
-|Arduino Panel|Buttons 1-64|
-
-There were multiple limitations to simply mapping these three controllers directly:
+At this point three controllers were visible to the computer; two T.16000m joysticks and the control panel. There were multiple limitations to simply mapping these three controllers directly:
 
   1. A maximum of 50 buttons are allowed per joystick in SC which means that not all buttons on the control panel could be used.
   2. Only one button can be mapped to each function.
@@ -161,7 +144,7 @@ Once configured, vJoy is a set and forget tool. It creates the virtual joysticks
   
 vJoy also include a utility to monitor the states of the vJoy joysticks. This is found in the start menu as `Monitor vJoy`.
 
-The virtual joysticks are now be shown in the list of USB game controllers.
+The virtual joysticks were now shown in the list of USB game controllers.
 
 ### Joystick Gremlin
 
