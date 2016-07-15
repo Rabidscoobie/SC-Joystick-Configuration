@@ -200,8 +200,34 @@ See you 'round the 'verse!**
 [8]  [vJoy][LINK-EXT-8] by *Shaul Eizikovich*  
 [9]  [SC Joystick Mapper][LINK-EXT-9] by *SCToolsfactory*  
 
+# F.A.Q.s
 
+I got many questions when I shared this on Reddit. I'm adding some that I got a few times here. I will only reference the original person who asked it. Thanks for your feedback, everyone!
 
+Q ([TankBoyKen][LINK-EXT-RED-TBK]): **How did you do the labeling?**  
+A: *I printed the reverse of the design (mirrored horizontally) onto a sheet of "over head transparency". I then cut each section including the holes for the buttons on my wife's paper-craft cutter (this could be done by hand). The sections are placed print down onto the top of the panel and held there by the switches. Placing it face down protects the printing and also "un-mirrors?" the design.
+
+Q ([elixin77][LINK-EXT-RED-EXN]): **Since you are using a hosas set up, wouldn't the panel be a reach in order to hit a button, especially when you need two hands on both sticks at the same time?**  
+A: *I've tried to use the buttons on the sticks for the functions I use most while both hands are required for flight. For example, at the moment I have hat up and hat down on my right stick to cycle friendlies and hostiles. Joystick Gremlin allows me to map any number of control inputs to the same function, so I can also map the panel buttons.*
+
+Q ([Cowbellius][LINK-EXT-RED-CBS]): **Do you feel it is a little early for me to be putting together a physical control panel when we're missing so many mechanics (and therefore important buttons)?**  
+A: *I had that in mind when I designed the layout of the switches (mostly) on a grid. If needed, I will be able to rearrange (and regroup) functions by reprinting the labels. Off hand I can think of at least one that I will want to add when it's available... "Reliant Vertical/Horizontal mode toggle" or whatever form that takes!*
+
+Q ([ASF_Memnoch][LINK-EXT-RED-ASFM]): **Any lighting? I love to play in the dark and would need lit buttons or a small LED on a gooseneck.**  
+A: *I have a couple of goosenecked LEDs on my bench (from a cheap LED book light) for that exact reason! It's still something I'm deciding on as I generally have enough light around me to see the panel.*
+
+Q ([Solidus_ty][LINK-EXT-RED-SLT]): **Do you have a link to the switches and buttons that you used?**  
+A: *Everything I used is quite common, but here is a quick parts list with where I sourced them:*
+   - Enclosure from Hammond Manufacturing
+   - Buttons and toggle switches from Futurlec
+   - Arduino "Pro Micro" clone from eBay - ensure it is ATmega32u4 powered
+   - MCP23017 from eBay (widely available inc. Futurlec)
+   - Proto-board from Sure Electronics
+   - 0.1" 8-way screw terminals from eBay
+   - Wiring and other miscellany from my random parts box(es)
+
+Q ([Obsidianpick9999][LINK-EXT-RED-OP9]): **Do you have the circuit diagram for that? I want to build something similar so it would be useful to see some examples like yours.**  
+A: *I am going to draw up my sketch of the control board ciruit and add it here. Stay tuned!*
 
 [comment]: # (==========================================================)
 [comment]: # (REFERENCED LINKS AND IMAGES)
@@ -232,3 +258,10 @@ See you 'round the 'verse!**
 [LINK-EXT-8]: http://vjoystick.sourceforge.net/ "'vJoy' Sourceforge page"
 [LINK-EXT-9]: https://github.com/SCToolsfactory/SCJMapper-V2 "'SCJMapper' repo"
 [LINK-EXT-10]: https://robertsspaceindustries.com/citizens/danricho "My Star Citizen profile"
+
+[LINK-EXT-RED-TBK]: https://www.reddit.com/u/TankBoyKen "Reddit User: TankBoyKen"
+[LINK-EXT-RED-EXN]: https://www.reddit.com/u/elixin77 "Reddit User: elixin77"
+[LINK-EXT-RED-CBS]: https://www.reddit.com/u/Cowbellius "Reddit User: Cowbellius"
+[LINK-EXT-RED-ASFM]: https://www.reddit.com/u/ASF_Memnoch "Reddit User: ASF_Memnoch"
+[LINK-EXT-RED-SLT]: https://www.reddit.com/u/Solidus_ty "Reddit User: Solidus_ty"
+[LINK-EXT-RED-OP9]: https://www.reddit.com/u/Obsidianpick9999 "Reddit User: Obsidianpick9999"
