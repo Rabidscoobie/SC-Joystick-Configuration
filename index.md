@@ -218,13 +218,13 @@ A: *I have a couple of goosenecked LEDs on my bench (from a cheap LED book light
 
 Q ([Solidus_ty][LINK-EXT-RED-SLT]): **Do you have a link to the switches and buttons that you used?**  
 A: *Everything I used is quite common, but here is a quick parts list with where I sourced them:*  
-   - *Enclosure from Hammond Manufacturing*
-   - *Buttons and toggle switches from Futurlec*
-   - *Arduino "Pro Micro" clone from eBay - ensure it is ATmega32u4 powered*
-   - *MCP23017 from eBay (widely available inc. Futurlec)*
-   - *Proto-board from Sure Electronics*
-   - *0.1" 8-way screw terminals from eBay*
-   - *Wiring and other miscellany from my random parts box(es)*
+   - *Enclosure from Hammond Manufacturing*  
+   - *Buttons and toggle switches from Futurlec*  
+   - *Arduino "Pro Micro" clone from eBay - ensure it is ATmega32u4 powered*  
+   - *MCP23017 from eBay (widely available inc. Futurlec)*  
+   - *Proto-board from Sure Electronics*  
+   - *0.1" 8-way screw terminals from eBay*  
+   - *Wiring and other miscellany from my random parts box(es)*  
 
 Q ([Obsidianpick9999][LINK-EXT-RED-OP9]): **Do you have the circuit diagram for that? I want to build something similar so it would be useful to see some examples like yours.**  
 A: *I am going to draw up my sketch of the control board ciruit and add it here. Stay tuned!*
