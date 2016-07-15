@@ -184,9 +184,9 @@ The end result is that I can now utilise all of the functions that the ships pro
 I have reworked the spreadsheet I used to keep track of the various functions whilst I was developing this project. It traces each button through it's various representations from physical button all the way to the key binding it controls in SC. I also includes the type of mapping I've used for each within Joystick Gremlin. 
 It is available [here][LINK-REPO-MAPPING].
 
+**Lastly, in case you are wondering, my in game moniker is [danricho][LINK-EXT-10], and if you've read this far you are probably already a Star Citizen, but if not use this referral code: STAR-7Y4C-Z2BN and get 5000 free in game credits (and a bonus for me too!).**
 
-**Lastly, in case you are wondering, my in game moniker is [danricho][LINK-EXT-10].  
-See you 'round the 'verse!**
+**See you 'round the 'verse!**
 
 # F.A.Q.s
 
