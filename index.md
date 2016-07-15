@@ -215,7 +215,9 @@ A: *Everything I used is quite common, but here is a quick parts list with where
      - *Wiring and other miscellany from my random parts box(es)*  
 
 Q ([Obsidianpick9999][LINK-EXT-RED-OP9]): **Do you have the circuit diagram for that? I want to build something similar so it would be useful to see some examples like yours.**  
-A: *I am going to draw up my sketch of the control board ciruit and add it here. Stay tuned!*
+A: *I have drawn up the control board ciruit below:*
+
+![Control Panel Driver Board Circuit Diagram][IMG-PANEL_CIRCUIT]
 
 # Reference List
 
@@ -240,8 +242,8 @@ A: *I am going to draw up my sketch of the control board ciruit and add it here.
 [IMG-PANEL_DRV_BOARD]: images/panel_driver_board.jpg
 [IMG-PANEL_WIRING]: images/panel_wiring.jpg
 [IMG-PANEL_FINISHED]: images/panel_finished.jpg
+[IMG-PANEL_CIRCUIT]: images/panel_driver_circuit.jpg
 [IMG-PLACEHOLDER]: images/placeholder.jpg
-
 
 [LINK-REPO-ARDFW]: https://github.com/danricho/SC-Joystick-Configuration/tree/master/ArduinoFirmware "Repo Link: Arduino Firmware"
 [LINK-REPO-JGCONF]: https://github.com/danricho/SC-Joystick-Configuration/tree/master/Joystick%20Gremlin "Repo Link: Joystick Gremlin"
