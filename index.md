@@ -188,18 +188,6 @@ It is available [here][LINK-REPO-MAPPING].
 **Lastly, in case you are wondering, my in game moniker is [danricho][LINK-EXT-10].  
 See you 'round the 'verse!**
 
-# Reference List
-
-[1]  [Star Citizen][LINK-EXT-1] by *Cloud Imperium Games*  
-[2]  [MCP23017 datasheet][LINK-EXT-2] by *Microchip*  
-[3]  [MCP23017 Arduino Library][LINK-EXT-3] by *Adafruit*  
-[4]  [5V/16MHz Pro Micro product page][LINK-EXT-4] by *Sparkfun*  
-[5]  [HID Joystick Arduino Library][LINK-EXT-5] by *MHeironimus*  
-[6]  [Pointy's Joystick Test][LINK-EXT-6] by *Pointy*  
-[7]  [Joystick Gremlin][LINK-EXT-7] by *WhiteMagic*  
-[8]  [vJoy][LINK-EXT-8] by *Shaul Eizikovich*  
-[9]  [SC Joystick Mapper][LINK-EXT-9] by *SCToolsfactory*  
-
 # F.A.Q.s
 
 I got many questions when I shared this on Reddit. I'm adding some that I got a few times here. I will only reference the original person who asked it. Thanks for your feedback, everyone!
@@ -228,6 +216,19 @@ A: *Everything I used is quite common, but here is a quick parts list with where
 
 Q ([Obsidianpick9999][LINK-EXT-RED-OP9]): **Do you have the circuit diagram for that? I want to build something similar so it would be useful to see some examples like yours.**  
 A: *I am going to draw up my sketch of the control board ciruit and add it here. Stay tuned!*
+
+# Reference List
+
+[1]  [Star Citizen][LINK-EXT-1] by *Cloud Imperium Games*  
+[2]  [MCP23017 datasheet][LINK-EXT-2] by *Microchip*  
+[3]  [MCP23017 Arduino Library][LINK-EXT-3] by *Adafruit*  
+[4]  [5V/16MHz Pro Micro product page][LINK-EXT-4] by *Sparkfun*  
+[5]  [HID Joystick Arduino Library][LINK-EXT-5] by *MHeironimus*  
+[6]  [Pointy's Joystick Test][LINK-EXT-6] by *Pointy*  
+[7]  [Joystick Gremlin][LINK-EXT-7] by *WhiteMagic*  
+[8]  [vJoy][LINK-EXT-8] by *Shaul Eizikovich*  
+[9]  [SC Joystick Mapper][LINK-EXT-9] by *SCToolsfactory*  
+
 
 [comment]: # (==========================================================)
 [comment]: # (REFERENCED LINKS AND IMAGES)
