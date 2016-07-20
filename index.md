@@ -18,8 +18,6 @@ When I started playing **Star Citizen [\[1\]](#reference-list "Reference List: [
 
 *Note: I only outline setting up the SC "flight" functionality as I primarily use keyboard and mouse for other parts of the game such as First-Person Shooting (FPS).*
 
-# Development Log
-
 ## Joysticks
 
 The first thing I decided was that I wanted my flight control to be a **HOSAS** (Hands On Stick And Stick) rather than the perhaps more common HOTAS (Hand On Throttle And Stick) setup. 
@@ -34,7 +32,7 @@ Having decided on the HOSAS setup, the next question was which joysticks I wante
   
 ![My Dual T.16000m Layout][IMG-STICK_LAYOUT]
 
-## Control Panel
+# Control Panel Development
 
 The first step in designing the control panel was to determine how many buttons I wanted to implement. I settled at around 60 after deciding which SC functions would be mapped to the panel itself, the buttons on the sticks, neither or both.
 
@@ -60,7 +58,7 @@ With sufficient I/O pins available (and my buttons and enclosure in-hand), I ass
 
 ![Control Panel Wiring][IMG-PANEL_WIRING]
 
-### Firmware
+## Firmware
 
 I am providing basic examples of how to use the libraries in this section.
 
@@ -118,7 +116,7 @@ void loop() {
 
 My Arduino firmware is available [here][LINK-REPO-ARDFW]. When loaded, the Arduino is listed as a standard USB Game Controller in Windows (run command: `joy.cpl`). The standard utility shows only the first 32 buttons. To see more, I had success with **Pointy's Joystick Test [\[6\]](#reference-list)**. 
 
-## Controller Fusion
+## PC Software
 
 At this point three controllers were visible to the computer; two T.16000m joysticks and the control panel. There were multiple limitations to simply mapping these three controllers directly:
 
@@ -173,13 +171,25 @@ My SC keybinding (.xml) is available [here][LINK-REPO-SCXML], and needs to be pl
 The keymapping is loaded by navigating in the menu to: Options, Keybinding, Advanced Controls Customization.
 Under Control Profiles, select the keymapping and chose the controllers to load.
 
-# Result
+### Joystick ID Fixer
+
+I created a script which will fix the joystick IDs in all of the configuration files if they change in Windows. It is available [here][LINK-REPO-IDFIX]. It's process is as follows:
+
+  1. Identify all of the joysticks connected by Name.  
+  2. Resolve which stick is which by the user pulling the left trigger.  
+  3. Resolve which vJoy is which by checking the button count (made vJoy 2 have 49 buttons, vJoy 1 still has 50).  
+  4. Check that Joystick Gremlin XML is setup for the correct Windows IDs for the sticks and the control panel.  
+  5. Check that the Joystick Gremlin modules are setup for the correct Windows IDs for the sticks and the control panel.  
+  6. Check that the Star Citizen keybinding XML is setup for the correct Windows IDs for the vJoy controllers.  
+  7. Correct any incorrect IDs in the above files and report it.
+  
+# Finished Panel
 
 The end result is that I can now utilise all of the functions that the ships provide in Star Citizen with the added bonus of some specialised custom functions.
 
 ![Finished Panel][IMG-PANEL_FINISHED]
 
-## Mapping Matrix
+# Mapping Matrix
 
 I have reworked the spreadsheet I used to keep track of the various functions whilst I was developing this project. It traces each button through it's various representations from physical button all the way to the key binding it controls in SC. I also includes the type of mapping I've used for each within Joystick Gremlin. 
 It is available [here][LINK-REPO-MAPPING].
@@ -249,6 +259,7 @@ A: *I have drawn up the control board ciruit below:*
 [LINK-REPO-JGCONF]: https://github.com/danricho/SC-Joystick-Configuration/tree/master/Joystick%20Gremlin "Repo Link: Joystick Gremlin"
 [LINK-REPO-SCXML]: https://github.com/danricho/SC-Joystick-Configuration/blob/master/dual_t16000m_leonardo_SCmap.xml "Repo Link: SC XML Map"
 [LINK-REPO-MAPPING]: https://raw.githubusercontent.com/danricho/SC-Joystick-Configuration/master/Mapping%20Summary.xlsx "Repo Link: Mapping Spreadsheet"
+[LINK-REPO-IDFIX]: https://github.com/danricho/SC-Joystick-Configuration/tree/master/Joystick%20ID%20Fixer "Repo Link: Joystick ID Fixer"
 
 
 [LINK-EXT-1]: https://robertsspaceindustries.com/ "'Roberts Space Industries' website"
