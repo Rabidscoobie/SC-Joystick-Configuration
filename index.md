@@ -183,7 +183,7 @@ I created a script which will fix the joystick IDs in all of the configuration f
   6. Check that the Star Citizen keybinding XML is setup for the correct Windows IDs for the vJoy controllers.  
   7. Correct any incorrect IDs in the above files and report it.
   
-# Finished Panel
+## Finished Panel
 
 The end result is that I can now utilise all of the functions that the ships provide in Star Citizen with the added bonus of some specialised custom functions.
 
