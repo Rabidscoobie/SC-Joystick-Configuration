@@ -34,6 +34,8 @@ Having decided on the HOSAS setup, the next question was which joysticks I wante
 
 # Control Panel Development
 
+## Hardware
+
 The first step in designing the control panel was to determine how many buttons I wanted to implement. I settled at around 60 after deciding which SC functions would be mapped to the panel itself, the buttons on the sticks, neither or both.
 
 ![My Control Panel Layout][IMG-PANEL_LAYOUT]
