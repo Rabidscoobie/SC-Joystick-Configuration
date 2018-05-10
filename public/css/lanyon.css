@@ -191,7 +191,7 @@ a.sidebar-nav-item:focus {
 }
 
 .sidebar-nav-root {
-  border-top: 1px solid rgba(255,255,255,.1);
+  border-bottom: 1px solid rgba(255,255,255,.1);
 }
 
 @media (min-width: 48rem) {
